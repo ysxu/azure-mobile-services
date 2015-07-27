@@ -31,8 +31,7 @@
         <h1>
 <a id="microsoft-azure-mobile-services" class="anchor" href="#microsoft-azure-mobile-services" aria-hidden="true"><span class="octicon octicon-link"></span></a>Microsoft Azure Mobile Services</h1>
 
-<p>With Microsoft Azure Mobile Services you can add a scalable backend to your connected client applications in minutes.
-To learn more, visit our <a href="http://azure.microsoft.com/en-us/develop/mobile/">Developer Center</a>.</p>
+<p>With Microsoft Azure Mobile Services you can add a scalable backend to your connected client applications in minutes. To learn more, visit our <a href="http://azure.microsoft.com/en-us/develop/mobile">Developer Center</a>.</p>
 
 <h2>
 <a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
@@ -53,21 +52,43 @@ cd ./azure-mobile-services/
 </code></pre>
 
 <h2>
-<a id="change-log" class="anchor" href="#change-log" aria-hidden="true"><span class="octicon octicon-link"></span></a>Change log</h2>
+<a id="reference-documentation" class="anchor" href="#reference-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference Documentation</h2>
 
-<p>see <a href="CHANGELOG.md">Change Log</a></p>
+<h4>
+<a id="azure-app-service-mobile-apps" class="anchor" href="#azure-app-service-mobile-apps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Azure App Service Mobile Apps</h4>
+
+<ul>
+<li><a href="http://azure.github.io/azure-mobile-services/ios/v3">iOS</a></li>
+</ul>
+
+<h4>
+<a id="mobile-services" class="anchor" href="#mobile-services" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mobile Services</h4>
+
+<ul>
+<li><a href="http://azure.github.io/azure-mobile-services/ios/v2">iOS</a></li>
+<li><a href="http://dl.windowsazure.com/androiddocs/">Android</a></li>
+</ul>
 
 <h2>
-<a id="managed-windows-8-and-windows-phone-8-client-sdk" class="anchor" href="#managed-windows-8-and-windows-phone-8-client-sdk" aria-hidden="true"><span class="octicon octicon-link"></span></a>Managed Windows 8 and Windows Phone 8 Client SDK</h2>
+<a id="change-log" class="anchor" href="#change-log" aria-hidden="true"><span class="octicon octicon-link"></span></a>Change log</h2>
 
-<p>Our managed portable library for Windows 8 and Windows Phone 8 Client SDK makes it incredibly easy to use Mobile Services from your Windows Store
-and Windows Phone 8 applications. The <a href="http://nuget.org/packages/WindowsAzure.MobileServices/">Microsoft Azure Mobile Services SDK</a> is available 
+<ul>
+<li><a href="CHANGELOG.ios.md">iOS SDK</a></li>
+<li><a href="CHANGELOG.managed.md">Managed SDK</a></li>
+<li><a href="CHANGELOG.android.md">Android SDK</a></li>
+<li><a href="CHANGELOG.javascript.md">JavaScript SDK</a></li>
+</ul>
+
+<h2>
+<a id="managed-windows-client-sdk" class="anchor" href="#managed-windows-client-sdk" aria-hidden="true"><span class="octicon octicon-link"></span></a>Managed Windows Client SDK</h2>
+
+<p>Our managed portable library for Windows 8, Windows Phone 8, Windows Phone 8.1, and Windows Universal Client SDK makes it incredibly easy to use Mobile Services from your Windows applications. The <a href="http://nuget.org/packages/WindowsAzure.MobileServices/">Microsoft Azure Mobile Services SDK</a> is available 
 as a Nuget package or you can download the source using the instructions above. The managed portable library also supports the full .NET 4.5 platform.</p>
 
 <h3>
 <a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
 
-<p>The SDK requires Visual Studio 2012 RTM.</p>
+<p>The SDK requires Visual Studio 2013.</p>
 
 <h3>
 <a id="building-and-referencing-the-sdk" class="anchor" href="#building-and-referencing-the-sdk" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building and Referencing the SDK</h3>
@@ -123,28 +144,36 @@ Windows Phone 8 and .NET 4.5.</p>
 <li>Open the <code>sdk\iOS\WindowsAzureMobileServices.xcodeproj</code> file in XCode.</li>
 <li>Set the active scheme option to <code>WindowsAzureMobileServices\* Simulator</code>.</li>
 <li>Open the <code>Test\WindowsAzureMobileServicesFunctionalTests.m</code> file in the Project Navigator panel of XCode.</li>
-<li>In the <code>setUp</code> code, replace the <code>&lt;Microsoft Azure Mobile Service App URL&gt;</code> and <code>&lt;Application Key&gt;</code> with the valid URL and Application Key for a working Mobile Service.</li>
+<li>In the <code>settings.plist</code> file, set <code>TestAppUrl</code> and <code>TestAppApplicationKey</code> to a valid URL and Application Key for a working Mobile Service.</li>
 <li>Run the tests using Command-U.</li>
 </ol>
 
 <h2>
 <a id="android-sdk" class="anchor" href="#android-sdk" aria-hidden="true"><span class="octicon octicon-link"></span></a>Android SDK</h2>
 
-<p>Microsoft Azure Mobile Services can be used with an Android-based device using our Android SDK. You can <a href="https://go.microsoft.com/fwLink/?LinkID=280126&amp;clcid=0x409">download the Android SDK</a> directly or you can download the source code using the instructions above.  </p>
+<p>Microsoft Azure Mobile Services can be used with an Android-based device using our Android SDK. You can get the Android SDK in one of the following two ways or you can download the source code using the instructions above.</p>
+
+<ol>
+<li>For an Android studio project, include the line <code>compile 'com.microsoft.azure:azure-mobile-services-android-sdk:2.0.3'</code> in the dependencies section of build.gradle file of the app</li>
+<li>Eclipse users can <a href="https://go.microsoft.com/fwLink/?LinkID=280126&amp;clcid=0x409">download the Android SDK</a> directly or can download the source code using the instructions above.</li>
+</ol>
 
 <h3>
 <a id="prerequisites-2" class="anchor" href="#prerequisites-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
 
-<p>The SDK requires Eclipse and the latest <a href="http://developer.android.com/tools/sdk/eclipse-adt.html">Android Development Tools</a>.</p>
+<p>The SDK requires Android Studio.</p>
 
 <h3>
 <a id="building-and-referencing-the-sdk-2" class="anchor" href="#building-and-referencing-the-sdk-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building and Referencing the SDK</h3>
 
 <ol>
-<li>In the folder <code>\azure-mobile-services\sdk\android\src\sdk\libs</code>, run either the <code>getLibs.ps1</code> script if you are running on Windows or the <code>getLibs.sh</code> script if you are running on Linux to download the required dependencies.</li>
-<li>Import the <code>\azure-mobile-services\sdk\android\src\sdk</code> project into your workspace</li>
-<li>Once Eclipse is done compiling, the resulting .jar file will be located in <code>\azure-mobile-services\sdk\android\src\sdk\bin</code>.</li>
-<li>To optionally build JavaDocs, right-click the <code>javadoc.xml</code> file and select Run As &gt; Ant Build.</li>
+<li>Open the folder <code>\azure-mobile-services\sdk\android</code> using the option <code>Open an existing Android Studio Project</code> in Android Studio.</li>
+<li>Project should be built automatically, In case it does not build, Right click on <code>sdk</code> folder and select <code>Make Module 'sdk'</code>
+</li>
+<li>The file <code>sdk-release.aar</code> should be present at <code>\azure-mobile-services\sdk\android\src\sdk\build\outputs\aar</code> </li>
+<li>Rename the file <code>sdk-release.aar</code> to <code>sdk-release.zip</code>
+</li>
+<li>Extract the zip file, <code>classes.jar</code> should be present in the root folder.</li>
 </ol>
 
 <h3>
@@ -153,24 +182,12 @@ Windows Phone 8 and .NET 4.5.</p>
 <p>The SDK has a suite of unit tests that you can easily run.</p>
 
 <ol>
-<li>Import the <code>\azure-mobile-services\sdk\android\test\sdk.testapp.tests</code> project in your Eclipse workspace</li>
-<li>Right-click the project name and select Run As &gt; Android JUnit Test</li>
-</ol>
-
-<p>It also contains an end-to-end test application. </p>
-
-<ol>
-<li>Use the <a href="http://manage.windowsazure.com">Azure portal</a> to create a new mobile service. Note down the service name and application key.</li>
-<li>If you want to run the authentication tests, configure all four authentication providers on the "Identity" tab</li>
-<li>
-<a href="http://nodejs.org/">Install node.js</a> and then run the command <code>npm install azure-cli -g</code>. This installs the Azure command-line tool.</li>
-<li>Use the <code>azure account</code> command to configure the tool to work with your Azure subscription</li>
-<li>Run the <code>SetupTables.sh</code> script in the <code>\azure-mobile-services\test\Android\SetupScripts</code> folder, which uses the tool to automatically create the tables needed for the test application to work.</li>
-<li>In the folder <code>\azure-mobile-services\test\Android\ZumoE2ETestApp\libs</code>, run either the <code>getLibs.ps1</code> script if you are running on Windows or the <code>getLibs.sh</code> script if you are running on Linux to download the required dependencies.</li>
-<li>Import the <code>\azure-mobile-services\test\Android\ZumoE2ETestApp</code> project in your Eclipse workspace</li>
-<li>Once the app is running, go to Settings type your mobile service URL and application key</li>
-<li>If you also want to test push support, get a Google Cloud Messaging API key from the <a href="https://code.google.com/apis/console/">Google APIs Console</a> and paste the key in the text box labeled GCM Sender Id</li>
-<li>Check the tests you want to run and then select "Run selected tests"</li>
+<li>Open the folder <code>\azure-mobile-services\sdk\android</code> using the option <code>Open an existing Android Studio Project</code> in Android Studio.</li>
+<li>Project should be built automatically, In case it does not build, Right click on <code>sdk</code> folder and select <code>Make Module 'sdk.testapp'</code>
+</li>
+<li>Expand <code>sdk.testapp</code> and sub folder <code>java</code>
+</li>
+<li>Right click on <code>com.microsoft.windowsazure.mobileservices.sdk.testapp</code>, Select <code>Run</code>, Select <code>Tests in com.microsoft.windowsazure.mobileservices.sdk.testapp</code> (with Android tests icon)</li>
 </ol>
 
 <h2>
@@ -220,9 +237,15 @@ Windows Phone 8 and .NET 4.5.</p>
 </ol>
 
 <h2>
-<a id="need-help" class="anchor" href="#need-help" aria-hidden="true"><span class="octicon octicon-link"></span></a>Need Help?</h2>
+<a id="useful-resources" class="anchor" href="#useful-resources" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful Resources</h2>
 
-<p>Be sure to check out the Mobile Services <a href="http://social.msdn.microsoft.com/Forums/en-US/azuremobile/">Developer Forum</a> if you are having trouble. The Mobile Services product team actively monitors the forum and will be more than happy to assist you.</p>
+<ul>
+<li><a href="https://github.com/Azure/azure-mobile-services-quickstarts">Quickstarts</a></li>
+<li><a href="https://github.com/Azure/azure-mobile-services-test">E2E Test Suite</a></li>
+<li><a href="https://github.com/Azure/mobile-services-samples">Samples</a></li>
+<li>Tutorials and product overview are available at <a href="http://azure.microsoft.com/en-us/develop/mobile">Microsoft Azure Mobile Services Developer Center</a>.</li>
+<li>Our product team actively monitors the <a href="http://social.msdn.microsoft.com/Forums/en-US/azuremobile/">Mobile Services Developer Forum</a> to assist you with any troubles.</li>
+</ul>
 
 <h2>
 <a id="contribute-code-or-provide-feedback" class="anchor" href="#contribute-code-or-provide-feedback" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute Code or Provide Feedback</h2>
@@ -230,11 +253,6 @@ Windows Phone 8 and .NET 4.5.</p>
 <p>If you would like to become an active contributor to this project please follow the instructions provided in <a href="http://azure.github.com/guidelines.html">Microsoft Azure Projects Contribution Guidelines</a>.</p>
 
 <p>If you encounter any bugs with the library please file an issue in the <a href="https://github.com/Azure/azure-mobile-services/issues">Issues</a> section of the project.</p>
-
-<h2>
-<a id="learn-more" class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn More</h2>
-
-<p><a href="http://azure.microsoft.com/en-us/develop/mobile">Microsoft Azure Mobile Services Developer Center</a></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/ysxu">ysxu</a></p>
